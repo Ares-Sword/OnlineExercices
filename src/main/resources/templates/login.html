@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.org" xmlns:method="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" type="text/css" media="all" href="/login.css" th:href="@{/login.css}"/>
+    <title>Title</title>
+</head>
+<body>
+<div th:if="${param.error}">
+    Invalid user or password
+</div>
+<div class="LoginCoverDiv">
+<div class="LoginDiv" >
+    <h1 class="LoginH1">Log In</h1>
+    <form th:action="@{/login}" method="post">
+    <div class="UserNameDiv"><label><input class="UserInput" type="text" name="username" placeholder="Username"/></label></div>
+    <div class="PasswordDiv"><label><input class="PasswordInput" type="text" name="password" placeholder="Password"/></label></div>
+
+    <div class="SignIn"><input class="Submit" type="submit" value="Sign in"/></div>
+    </form>
+</div>
+</div>
+</body>
+</html>
