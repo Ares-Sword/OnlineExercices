@@ -1,13 +1,14 @@
 .header{
-background:#910303;
+background:grey;
 padding-top:25px;
 padding-bottom:25px;
 text-align:center;
 font-size:30px;
 }
-.divForJExercices{
+.divForEExercices{
 position:relative;
-border:1px solid yellow;
+background:grey;
+border:1px solid black;
 width:150px;
 height:300px;
 right:-100px;
@@ -15,10 +16,10 @@ bottom:-100px;
 
 
 }
-.javaDiv{
+.easyDiv{
 position:relative;
-background:#910303;
-border:1px solid yellow;
+background:black;
+border:1px solid black;
 width:150px;
 height:50px;
 text-align:center;
@@ -27,19 +28,41 @@ bottom:-100px;
 padding-bottom:20px;
 }
 
-.divForSExercices{
+.divForMExercices{
 position:relative;
-border:1px solid yellow;
+background:grey;
+border:1px solid black;
 width:150px;
 height:300px;
 right:-1000px;
 bottom:274px;
 
 }
-.sqlDiv{
+.divForHExercices{
 position:relative;
-background:#910303;
-border:1px solid yellow;
+background:grey;
+border:1px solid black;
+width:150px;
+height:300px;
+right:-550px;
+bottom:-150px;
+
+}
+.hardDiv{
+position:relative;
+background:black;
+border:1px solid black;
+width:150px;
+height:50px;
+text-align:center;
+right:-550px;
+bottom:-150px;
+padding-bottom:20px;
+}
+.mediumDiv{
+position:relative;
+background:black;
+border:1px solid black;
 width:150px;
 height:50px;
 text-align:center;
@@ -51,25 +74,108 @@ padding-bottom:20px;
 .aboutUs{
 position:relative;
 width:300px;
-bottom:700px;
+bottom:1100px;
 text-align:center;
 right:-475px;
+color:white;
 
 
+}
+.aboutUs1{
+position:relative;
+
+left:-400px;
+top:-200px;
+
+
+}
+.aboutUs2{
+position:relative;
+
+right:-400px;
+top:-700px;
 }
 .aboutUsTitle{
 position:relative;
 text-align:center;
-background:white;
-top:-700px;
+background:black;
+top:-1130px;
 
 
 }
+
+.bookDiv {
+position:relative;
+background:white;
+width:300px;
+height:300px;
+bottom:900px;
+right:-500px;
+}
+.book{
+width:250px;
+height:300px;
+}
+
 
 
 
 body {
-background-color:black;
+background-color:#fbfbf8;
 margin:0;
+padding-top: 0px;
 }
+.buttons{
+position:relative;
+top:-170px;
+right:-470px;
+
+}
+.registrationButton{
+  background-color: black;
+  color: white;
+  padding: 15px 25px;
+}
+.loginButton {
+  background-color: black;
+  color: white;
+  padding: 15px 25px;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  margin-top:10%
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+li {
+  float: left;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li a:hover:not(.active) {
+  background-color: #111;
+}
+.nav {
+  padding-top: 0px;
+  background: #fff;
+  height: auto;
+  width: 100%;
+  z-index: 150;
+  top: o;
+  position: fixed;
+  box-shadow: 0 2px 3px rgba(0,0,0,.4);
+}
+
+
+
 

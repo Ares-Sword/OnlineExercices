@@ -1,45 +1,50 @@
 package com.example.ExercicesWithSolution.ExercicesWithSolution.Security;
 
+
+
+
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.core.userdetails.User;
-import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.security.crypto.factory.PasswordEncoderFactories;
+import org.springframework.security.crypto.password.NoOpPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
 @EnableWebSecurity
-public class Security  {
-    @Bean
-    public SecurityFilterChain securityMehtod(HttpSecurity security) throws Exception {
-        security
-                .authorizeHttpRequests((requests) -> requests
-                        .antMatchers("/login").permitAll()
-                        .antMatchers("/exercices").hasRole("USER"))
+public class Security
+{
+    @Autowired
+UserService userService;
 
-                .formLogin((form) -> form
-                        .loginPage("/login").permitAll()
-                        .defaultSuccessUrl("/exercices",true )
-                        .permitAll())
-                .logout((logout) -> logout.permitAll());
-        return security.build();
-    }
-    @Bean
-    public UserDetailsService userDetailsService() {
-        UserDetails user= User.withDefaultPasswordEncoder()
-                .username("username")
-                .password("password")
-                .roles("USER")
-                .build();
 
-        return new InMemoryUserDetailsManager(user);
+
+    @Autowired
+    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception
+    {
+
+        auth.inMemoryAuthentication().passwordEncoder(passwordEncoder).withUser("user").password(("{noop}password")).authorities("USER");
+        auth.userDetailsService(userService).passwordEncoder(NoOpPasswordEncoder.getInstance());
 
 
     }
+    @Bean
+    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+
+        http.formLogin().loginPage("/login").defaultSuccessUrl("/exercices");
+        return http.build();
+    }
+
+    PasswordEncoder passwordEncoder= PasswordEncoderFactories.createDelegatingPasswordEncoder();
 
 
 
-}
+    }
+
+
+

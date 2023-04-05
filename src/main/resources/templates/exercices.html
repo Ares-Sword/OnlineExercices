@@ -2,36 +2,77 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <link rel="stylesheet" type="text/css" media="all" href="/exercices.css" th:href="@{/exercices.css}"/>
+    <script type="text/javascript" th:src="@{/exercices.js}"></script>
 <title>List of Exercices</title>
+
 </head>
 <body >
 
 <div class="header">
-    <h1 class="headerTitle">SQL and Java Exercices with solution
+    <h1 class="headerTitle">Online Exercices
     </h1>
-    <a href="login" style="color:black;" class="loginHref">Log In</a>
+<div class="nav">
+       <ul>
+           <li>  <a  href="registration">Create account</a></li>
+  <li> <a  href="login" >Log In</a></li>
+       </ul>
+</nav>
+
 </div>
 </div>
-<div class="javaDiv"><h1 class="javaH1">Java</h1></div>
-<div class="divForJExercices">
-<br><a href="exercice0">Exercice 0</a></br>
-<br><a href="exercice1">Exercice 1</a></br>
-<br><a href="exercice2">Exercice 2</a></br>
-<br><a href="exercice3">Exercice 3</a></br>
-<br><a href="exercice4">Exercice 4</a></br>
+<div class="easyDiv"><h1 class="easyH1" style="color:white">Easy</h1></div>
+<div class="divForEExercices">
+<br><a href="exercice0" style="color:black">Exercice 0</a></br>
+<br><a href="exercice1" style="color:black">Exercice 1</a></br>
+<br><a href="exercice2" style="color:black">Exercice 2</a></br>
+<br><a href="exercice3" style="color:black">Exercice 3</a></br>
+<br><a href="exercice4" style="color:black">Exercice 4</a></br>
 </div>
-<div class="sqlDiv"><h1 class="sqlH1">Sql</h1></div>
-<div class="divForSExercices">
-    <br><a href="exercice0">Exercice 0</a></br>
-    <br><a href="exercice1">Exercice 1</a></br>
-    <br><a href="exercice2">Exercice 2</a></br>
-    <br><a href="exercice3">Exercice 3</a></br>
-    <br><a href="exercice4">Exercice 4</a></br>
+<div class="mediumDiv"><h1 class="mediumH1" style="color:white">Medium</h1></div>
+<div class="divForMExercices">
+    <br><a href="exercice0" style="color:black">Exercice 0</a></br>
+    <br><a href="exercice1" style="color:black">Exercice 1</a></br>
+    <br><a href="exercice2" style="color:black">Exercice 2</a></br>
+    <br><a href="exercice3" style="color:black">Exercice 3</a></br>
+    <br><a href="exercice4" style="color:black">Exercice 4</a></br>
+</div>
+<div class="hardDiv"><h1 class="hardH1" style="color:white">Hard</h1></div>
+<div class="divForHExercices">
+    <br><a href="exercice0" style="color:black">Exercice 0</a></br>
+    <br><a href="exercice1" style="color:black">Exercice 1</a></br>
+    <br><a href="exercice2" style="color:black">Exercice 2</a></br>
+    <br><a href="exercice3" style="color:black">Exercice 3</a></br>
+    <br><a href="exercice4" style="color:black">Exercice 4</a></br>
 </div>
 <div class="aboutUsTitle">About Us</div>
 <div class="aboutUs">
-    <p class="pAboutUs" style="color:white;">Quisque convallis enim ac molestie mollis. Aliquam lacus libero, auctor quis quam id, placerat luctus odio. Donec non eros luctus, suscipit lacus sed, tincidunt turpis. Sed sit amet ipsum sed neque tempus accumsan quis vel diam. Nulla volutpat, enim at elementum porttitor, risus dui iaculis tellus, sit amet ornare augue lacus ultrices orci.
+    <p class="pAboutUs" style="color:black">Quisque convallis enim ac molestie mollis. Aliquam lacus libero, auctor quis quam id, placerat luctus odio. Donec non eros luctus, suscipit lacus sed, tincidunt turpis. Sed sit amet ipsum sed neque tempus accumsan quis vel diam. Nulla volutpat, enim at elementum porttitor, risus dui iaculis tellus, sit amet ornare augue lacus ultrices orci.
         Vestibulum suscipit ante vel sem imperdiet imperdiet. Donec sed felis in lacus maximus faucibus. Duis finibus fermentum nulla, sed fringilla felis dapibus non. Aliquam bibendum elit rhoncus velit pulvinar, vel rutrum lectus dignissim. Nulla facilisi. Suspendisse hendrerit massa vel augue pellentesque, quis malesuada velit feugiat.</p>
+</div>
+
+<div class="bookDiv">
+<img
+        class="book"
+        th:src="@{/photo1.png}"
+        th:onclick="showAlert()"
+/>
+
+    <div class="aboutUs1">
+        Mauris non eros id enim placerat scelerisque. Aenean egestas pharetra velit, vel tincidunt purus viverra sed. Cras congue elit euismod vulputate lacinia. Cras consequat nibh odio, ut vulputate tortor tincidunt sit amet. Phasellus tristique justo lobortis, consequat leo nec, eleifend urna. Morbi condimentum ultrices augue,
+        vel viverra quam lacinia quis. Curabitur vitae orci a lorem facilisis pretium eu et ex. Aenean massa tellus, sodales ut est vitae, tempus tristique risus. Curabitur eleifend ullamcorper ex nec mattis. Aliquam a semper dolor, a condimentum mi.
+        Donec congue, purus eget feugiat rhoncus, tellus elit ultrices ligula, eget tempor ex mi vel tellus. Morbi porttitor pulvinar eros nec imperdiet. Curabitur aliquam, massa id venenatis fermentum, libero ipsum euismod diam, sit amet sollicitudin tellus nibh tincidunt quam. Duis sit amet tempus arcu. Curabitur vel arcu interdum,
+        maximus lacus quis, luctus metus. Nulla a ultrices lacus. Fusce lacinia sit amet mauris eget pharetra. Donec nec tempus nibh, vitae accumsan sapien. Duis nec feugiat erat. Nullam faucibus nisl non ipsum mattis lobortis.
+    </div>
+    <div class="aboutUs2">
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque nibh mi, dapibus in placerat ac, tincidunt eleifend leo. Quisque semper enim eget quam auctor, vel sodales augue viverra. Donec sit amet mi eu urna molestie vestibulum.
+        Suspendisse potenti. Curabitur leo ante, consectetur sit amet metus a, commodo venenatis mi. Proin rhoncus, dolor consectetur cursus porta, nisi felis tincidunt elit, in sollicitudin ex nisl id tellus. Donec ac risus dui. Praesent non pulvinar magna, nec porttitor odio. Nulla non faucibus tellus, id egestas elit. Nulla faucibus interdum justo, non mollis ante feugiat a.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sapien eros, rhoncus sed pellentesque sed, luctus vitae erat. Donec facilisis tempus ante. Curabitur at commodo nunc. Nullam accumsan vel tellus non ultricies. In sagittis congue tellus id blandit. Ut congue leo quis metus tempor luctus. Fusce tincidunt nibh et sapien dapibus laoreet. Duis id dolor in risus venenatis ornare.
+
+        Mauris non eros id enim placerat scelerisque. Aenean egestas pharetra velit, vel tincidunt purus viverra sed. Cras congue elit euismod vulputate lacinia. Cras consequat nibh odio, ut vulputate tortor tincidunt sit amet. Phasellus tristique justo lobortis, consequat leo nec, eleifend urna. Morbi condimentum ultrices augue, vel viverra quam lacinia quis. Curabitur vitae orci a lorem facilisis pretium eu et ex.
+        Aenean massa tellus, sodales ut est vitae, tempus tristique risus. Curabitur eleifend ullamcorper ex nec mattis. Aliquam a semper dolor, a condimentum mi.
+
+    </div>
+
 </div>
 </body>
 </html>
